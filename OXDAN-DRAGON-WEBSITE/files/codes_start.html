@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> OXDAN DRAGON </title>
+    <link rel="icon" type="image/x-icon" href="resources/images/my_dragon_ico.ico">
+    <link rel="stylesheet" href="css/codes_start_style.css">
+
+</head>
+<body onload="playSound_promo()">
+
+  <audio id="mySound_promo" src="resources/musics/waterfall.mp3"></audio>
+
+  <a class="text_promo_code">Enter promo-code: </a>
+  <input type="text" id="command" placeholder="Promo-code here">
+  <div class="button_submit_text">
+      <button class="button_1 button_Submit_1" id="submit"> SUBMIT </button>
+      <button onclick="history.go(-1)" class="button_2 button_Submit_2" target="_blank"> EXIT </button>
+  </div>
+  <div id="output"></div>
+
+  <script src="js/promo_codes_script.js"></script>
+</body>
+</html>

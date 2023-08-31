@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="en">
+
+<head>
+
+    <title> MAIN MENU </title>
+    <link rel="icon" type="image/x-icon" href="resources/images/my_dragon_ico.ico">
+    <script type="text/javascript" src="js/before_skip_start_script.js"></script>
+
+ <style>
+
+    body
+    {
+      background: rgb(255, 255, 255);
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+
+    .div
+    {
+        height: 1000%;
+        width: 1000%;
+        background-image: url("resources/images/first_photo_oxdan.png");
+        color: white;
+        position: absolute;
+        left: -11%;
+        top: -15%;
+        display:block;
+        opacity:1;
+        transition : all .105s;
+        -wekit-transition : all .105s;
+        -moz-transition : all .105s;
+    }
+
+ </style>
+
+</head>
+
+<body onload="playSound()">
+    
+    <audio id="mySound" src="resources/musics/undertale.mp3"></audio>
+    <audio id="mySound_2" src="resources/musics/just-sans-talking.mp3"></audio>
+    <div class="div" id="thisone" onkeyspace="waithide()"></div>
+
+</body>
+
+</html>

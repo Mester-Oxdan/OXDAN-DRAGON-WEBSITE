@@ -1,0 +1,53 @@
+<style>
+
+    .bg_image_dragon
+    {
+        /* The image used */
+        background-image: url("files/resources/images/my_dragon_icon_full.jpg");
+        
+        /* Add the blur effect */
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        
+        /* Full height */
+        height: 100%;
+        width: 100%;
+        
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+
+</style>
+
+
+<!Doctype html>
+    <html lang="en">
+        <head>
+            <title> OXDAN DRAGON </title>
+            <link rel="icon" type="image/x-icon" href="files/resources/images/my_dragon_ico.ico">
+            <link rel="stylesheet" href="files/css/My_site_style.css">
+        </head>
+        <body>
+            <div class="bg_image_dragon"></div>
+            <div class="bg-text">
+            <div class="container">
+                
+                <div class="header">
+                    CHOOSE OPTION:
+                </div>
+                <div id="nav">
+                    
+                    <ul>
+                        <a href="files/registration_start.html"><li>REGISTRATION</li></a>
+                        <a href="files/login_start.html"><li>LOGIN</li></a>
+                        <a href="files/before_skip_start.html"><li>SKIP</li></a>
+                        <a onclick="history.go(-1)" class="exit" target="_blank"><li>EXIT</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </body>
+    </html>

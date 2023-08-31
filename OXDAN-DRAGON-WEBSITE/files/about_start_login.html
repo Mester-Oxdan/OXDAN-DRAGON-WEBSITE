@@ -1,0 +1,295 @@
+<style>
+
+    .column_left_img {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+      }
+    
+    .column_right_img {
+        background-position: right;
+        margin-right: -325px;
+        float: right;
+        width: 33.33%;
+        padding: 5px;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+    }
+
+    body {
+        background: #ffffff;
+        margin: 15px;
+        padding: 0px;
+        overflow-x: hidden;
+        overflow-y: visible;
+        font-family: sans-serif;
+        
+    }
+    
+    .bg-text_large_main
+    {
+        color: rgb(0, 0, 0);
+        font-size: 50px;
+        position: absolute;
+        top: 15%;
+        left: 64%;
+        transform: translate(-50%, -50%);
+        font-weight: normal;
+        width: 100%;
+    }
+    
+    .bg-text_skip_upper_menu_bar
+    {
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 98%;
+    }
+
+    .bg-text
+    {
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        font-weight: normal;
+        position: absolute;
+        top: 21%;
+        left: 12%;
+        width: 100%;
+    }
+    
+    .topnav 
+    {
+        overflow: hidden;
+        background-color: #333;
+    
+    }
+      
+    .topnav a 
+    {
+        float: left;
+        color: #f2f2f2;
+        padding: 14px 103.5px;
+        text-decoration: none;
+        font-size: 17px;
+    
+        transition: .2s ease-in-out 0s;
+        -webkit-mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
+        mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
+        -webkit-mask-size: 800%;
+        mask-size: 800%;
+        -webkit-mask-position: 0;
+        mask-position: 0;
+    }
+      
+    .topnav a:hover 
+    {
+        background-color: #ddd;
+        color: black;
+    
+        transition: mask-position 1s ease,-webkit-mask-position 1s ease;
+        -webkit-mask-position: 120%;
+        mask-position: 120%;
+        opacity: 1;
+    
+    }
+
+    .bg-text_images_screens
+    {
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        font-weight: normal;
+        position: absolute;
+        top: 86%;
+        left: 16%;
+        width: 100%;
+    }
+
+    .circle {
+        position: relative;
+        left: 1379.5px;
+        top: -55px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: #ccc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+      }
+  
+      .name_circle
+      {
+        position: relative;
+        color: black;
+        left: 1376px;
+        top: -53px;
+        text-align: left;
+        direction: ltr;
+      }
+    
+    .circle img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      transition: filter 0.3s;
+    }
+
+    .circle:hover img {
+      filter: brightness(80%);
+    }
+
+    .circle input[type="file"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+</style>
+
+<!Doctype html>
+<html>
+    <head>
+        <title> MAIN MENU </title>
+        <link rel="icon" type="image/x-icon" href="resources/images/my_dragon_ico.ico">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <script>
+
+            function playSound() {
+              setTimeout(() => {
+                  document.getElementById('mySound').play();
+                  document.getElementById('mySound').addEventListener('ended', function() {
+                    document.getElementById('mySound_2').play();
+                  });
+                  
+              }, 500)
+            }
+  
+          </script>
+
+    </head>
+
+    <body onload="playSound()">
+        
+    <audio id="mySound" src="resources/musics/undertale_shop.mp3"></audio>
+    <audio id="mySound_2" src="resources/musics/undertale_shop.mp3"></audio>
+
+        <div class="column_left_img">
+            
+            <img src="resources/images/my_dragon_icon_full.jpg" alt="Snow" height="150%" width="30%" >
+        </div>
+        <div class="column_right_img">
+            
+            <img src="resources/images/my_dragon_icon_full.jpg" alt="Snow" left="100%" height="150%" width="30%">
+        </div>
+
+        <div class="bg-text_skip_upper_menu_bar">
+
+            <div class="topnav">
+                <a href="skip_start_login.html">HOME</a>
+                <a href="registration_start.html">REGISTRATION</a>
+                <a href="login_start.html">LOGIN</a>
+                <a href="codes_start.html">CODES</a>
+                <a href="about_start_login.html">ABOUT</a>
+            </div>
+
+            <label for="upload-input">
+              <div class="circle">
+                  <img id="profile-pic" src="resources/images/default_pict.png" alt="Profile Picture">
+                  <input type="file" id="upload-input" accept="image/*">
+              </div>
+              <span class="name_circle" id="usernamePlaceholder"></span>
+              <script>
+                  // Get the username from the URL parameters
+                  var urlParams = new URLSearchParams(window.location.search);
+                  var username = urlParams.get('username');
+          
+                  // Display the username in the second HTML file
+                  var usernamePlaceholder = document.getElementById('usernamePlaceholder');
+                  if (usernamePlaceholder) {
+                      usernamePlaceholder.textContent = username || 'No body.';
+                  }
+              </script>
+          </label>
+          <script src="js/upload_pict.js"></script>
+
+        </div>
+
+        <div class="bg-text_large_main">
+
+            <a><b>!ORIGINAL OXDAN DRAGON WEBSITE!</b></a>
+
+        </div>
+        
+        <div class="bg-text">
+
+            <a><b>!REMEMBER!</b> Author don't care and don't responsible what are you doing. This console created for learning programing and how it is working. You</a>
+            <a><br> </br> can find code of this console on Author github(<a href="https://github.com/Mester-Oxdan" target="_blank">https://github.com/Mester-Oxdan</a>). This console have so much advantages for example 1) so many</a>
+            <a><br> </br> commands, this console have 9 classes commands it is MAINS, HACKER_STUFFS, PICTURES, ACCOUNTS, SIRIOUS, GAMES, OWNS, PRANKS,</a>
+            <a><br> </br> ELSES. Author advises testing all this utilities just on yours devices. If you find some were mistakes please let Author know. You can send message</a>
+            <a><br> </br> on Author gmail(bogerter4521de@gmail.com) or Author github(<a href="https://github.com/Mester-Oxdan" target="_blank">https://github.com/Mester-Oxdan</a>) will be better if you will take picture or video of</a>
+            <a><br> </br> problem. Please don't send bull shit on Author gmail or github. Author just want to do console perfect with your help. If you have ideas it is also</a>
+            <a><br> </br> can be helpful for Author. Author will checking 1 time email and github within one week. Difference between OXDAN DRAGON C/C++ and OXDAN</a>
+            <a><br> </br> DRAGON PYTHON. O. D. PYTHON and O. D. C/C++ almost same but Python better because for Author was easier programing on Python than on</a>
+            <a><br> </br> C/C++, so Python likely have lettle bit more commands than C/C++. This console just for Windows! Author still did't this console for anothers</a>
+            <a><br> </br> systems. Thanks!</a>
+            <a><b>Photos 2023:</b></a>
+
+        </div>
+
+        <div class="bg-text_images_screens">
+            <div class="w3-row-padding">
+                <div class="w3-container w3-third">
+                  <img src="resources/images/screen_console_menu.png" style="width:340px;position:relative;left: -10%;cursor:pointer" 
+                  onclick="onClick(this)" class="w3-hover-opacity">
+                </div>
+                <div class="w3-container w3-third">
+                  <img src="resources/images/screen_console_rules.png" style="width:340px;position:relative;left: -38%;cursor:pointer" 
+                  onclick="onClick(this)" class="w3-hover-opacity">
+                </div>
+                <div class="w3-container w3-third">
+                <img src="resources/images/screen_console_start.png" style="width:340px;position:relative;left: -66%;cursor:pointer"
+                  onclick="onClick(this)" class="w3-hover-opacity">
+                </div>
+                <div class="w3-container w3-third">
+                    <img src="resources/images/screen_console_commands.png" style="width:340px;position:relative;left: 28%;cursor:pointer"
+                      onclick="onClick(this)" class="w3-hover-opacity">
+                    </div>
+                <div class="w3-container w3-third">
+                        <img src="resources/images/screen_console_author.png" style="width:340px;position:relative;left: 2%;cursor:pointer"
+                          onclick="onClick(this)" class="w3-hover-opacity">
+                </div>
+
+              </div>
+              
+              <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                <div class="w3-modal-content w3-animate-zoom">
+                  <img id="img01" style="width:100%">
+                </div>
+              </div>
+              
+              <script>
+              function onClick(element) {
+                document.getElementById("img01").src = element.src;
+                document.getElementById("modal01").style.display = "block";
+              }
+              </script>
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,256 @@
+<style>
+
+    body {
+      background: #ffffff;
+      margin: 15px;
+      padding: 0px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      font-family: sans-serif;
+      
+  }
+  
+      .column_left_img {
+          float: left;
+          width: 33.33%;
+          padding: 5px;
+          filter: blur(8px);
+          -webkit-filter: blur(8px);
+        }
+      
+      .column_right_img {
+          background-position: right;
+          margin-right: -325px;
+          float: right;
+          width: 33.33%;
+          padding: 5px;
+          filter: blur(8px);
+          -webkit-filter: blur(8px);
+      }
+  
+      .circle {
+        position: relative;
+        left: 1379.5px;
+        top: -55px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: #ccc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+      }
+  
+      .name_circle
+      {
+        position: relative;
+        color: black;
+        left: 1376px;
+        top: -53px;
+        
+        text-align: left;
+        direction: ltr;
+      }
+      
+      .circle img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        transition: filter 0.3s;
+      }
+  
+      .circle:hover img {
+        filter: brightness(80%);
+      }
+  
+      .circle input[type="file"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+      }
+  
+  </style>
+  
+  <!Doctype html>
+  <html>
+      <head>
+          <title> MAIN MENU </title>
+          <link rel="icon" type="image/x-icon" href="resources/images/my_dragon_ico.ico">
+          <link rel="stylesheet" href="css/skip_start_style_login.css">
+          <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
+          <script>
+  
+            function playSound() {
+              setTimeout(() => {
+                  document.getElementById('mySound').play();
+                  document.getElementById('mySound').addEventListener('ended', function() {
+                    document.getElementById('mySound_2').play();
+                  });
+                  
+              }, 500)
+            }
+  
+          </script>
+  
+      </head>
+  
+      <body onload="playSound()">
+  
+        <audio id="mySound" src="resources/musics/undertale_shop.mp3"></audio>
+        <audio id="mySound_2" src="resources/musics/undertale_shop.mp3"></audio>
+  
+          <div class="column_left_img">
+              
+              <img src="resources/images/my_dragon_icon_full.jpg" alt="Snow" height="150%" width="30%" >
+          </div>
+          <div class="column_right_img">
+              
+              <img src="resources/images/my_dragon_icon_full.jpg" alt="Snow" left="100%" height="150%" width="30%">
+          </div>
+  
+          <div class="bg-text_skip_button">
+  
+              <button class="button button_download_c"> DOWNLOAD C/C++ D.C. </button>
+              <button class="button button_download_python"> DOWNLOAD PYTHON D.C. </button>
+  
+          </div>
+          <div class="bg-text_skip_upper_menu_bar">
+  
+              <div class="topnav">
+                  <a href="skip_start_login.html">HOME</a>
+                  <a href="registration_start.html">REGISTRATION</a>
+                  <a href="login_start.html">LOGIN</a>
+                  <a href="codes_start.html">CODES</a>
+                  <a href="about_start_login.html">ABOUT</a>
+                  
+              </div>
+              
+              <!--<label for="upload-input">
+                <div class="circle">
+                  <img id="profile-pic" src="resources/images/default_pict.png" alt="Profile Picture">
+                  
+                  <input type="file" id="upload-input" accept="image/*">
+                </div>
+                
+                <span class="name_circle" id="usernamePlaceholder"></span>
+
+                <script>
+                    // Get the username from the URL parameters
+                    var urlParams = new URLSearchParams(window.location.search);
+                    var username = urlParams.get('username');
+
+                    // Display the username in the second HTML file
+                    var usernamePlaceholder = document.getElementById('usernamePlaceholder');
+                    if (usernamePlaceholder) {
+                    usernamePlaceholder.textContent = username || 'No body.';
+                    }
+                </script> 
+
+                
+              </label>
+            
+              <script src="js/upload_pict.js"></script>-->
+
+              <label for="upload-input">
+                <div class="circle">
+                    <img id="profile-pic" src="resources/images/default_pict.png" alt="Profile Picture">
+                    <input type="file" id="upload-input" accept="image/*">
+                </div>
+                <span class="name_circle" id="usernamePlaceholder"></span>
+                <script>
+                    // Get the username from the URL parameters
+                    var urlParams = new URLSearchParams(window.location.search);
+                    var username = urlParams.get('username');
+            
+                    // Display the username in the second HTML file
+                    var usernamePlaceholder = document.getElementById('usernamePlaceholder');
+                    if (usernamePlaceholder) {
+                        usernamePlaceholder.textContent = username || 'No body.';
+                    }
+                </script>
+            </label>
+            <script src="js/upload_pict.js"></script>
+            
+          </div>
+  
+          <div class="bg-text_large_main">
+  
+              <a><b>!ORIGINAL OXDAN DRAGON WEBSITE!</b></a>
+  
+          </div>
+  
+          <div class="bg-text">
+  
+            <a><b href="about_start.html">About Author: </b>Author of this console is <b>OXDAN PRADUCTION</b> </a>
+            <a><br> </br><b>Author email: </b>bogerter4521de@gmail.com</a><b href="https://instagram.com/oxdanpraduction" target="_blank" style="margin-left: 15.3em;">Author Instagram: </b><a href="https://instagram.com/oxdanpraduction" target="_blank">https://instagram.com/oxdanpraduction</a>
+            <br> </br><b href="https://www.youtube.com/@Oxdan_products" target="_blank">Author Youtube: </b><a href="https://www.youtube.com/@Oxdan_products" target="_blank">https://www.youtube.com/@Oxdan_products</a><b href="https://kwork.com/user/jecob" target="_blank" style="margin-left: 5em;">Author Kwork: </b><a href="https://kwork.com/user/jecob" target="_blank">https://kwork.com/user/jecob</a>
+            <br> </br><b href="www.tiktok.com/@oxdan_products." target="_blank">Author Tik Tok: </b><a href="www.tiktok.com/@oxdan_products." target="_blank">www.tiktok.com/@oxdan_products.</a><b href="https://www.fiverr.com/jecob_567" target="_blank"style="margin-left: 10.5em;">Author Fiverr: </b><a href="https://www.fiverr.com/jecob_567" target="_blank">https://www.fiverr.com/jecob_567</a>
+            
+
+            <a><br><b href="https://github.com/Mester-Oxdan" target="_blank" style="margin-left: 23em;">Author github: </b><a href="https://github.com/Mester-Oxdan" target="_blank">https://github.com/Mester-Oxdan</a><br><b>Photos 2023:</b></a>
+          </div>
+  
+          <div class="bg-text_images_screens">
+              <div class="w3-row-padding">
+                  <div class="w3-container w3-third">
+                    <img src="resources/images/screen_console_menu.png" style="width:340px;position:relative;left: -10%;cursor:pointer" 
+                    onclick="onClick(this)" class="w3-hover-opacity">
+                  </div>
+                  <div class="w3-container w3-third">
+                    <img src="resources/images/screen_console_rules.png" style="width:340px;position:relative;left: -38%;cursor:pointer" 
+                    onclick="onClick(this)" class="w3-hover-opacity">
+                  </div>
+                  <div class="w3-container w3-third">
+                  <img src="resources/images/screen_console_start.png" style="width:340px;position:relative;left: -66%;cursor:pointer"
+                    onclick="onClick(this)" class="w3-hover-opacity">
+                  </div>
+                  <div class="w3-container w3-third">
+                      <img src="resources/images/screen_console_commands.png" style="width:340px;position:relative;left: 28%;cursor:pointer"
+                        onclick="onClick(this)" class="w3-hover-opacity">
+                      </div>
+                  <div class="w3-container w3-third">
+                          <img src="resources/images/screen_console_author.png" style="width:340px;position:relative;left: 2%;cursor:pointer"
+                            onclick="onClick(this)" class="w3-hover-opacity">
+                  </div>
+  
+                </div>
+                
+                <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                  <div class="w3-modal-content w3-animate-zoom">
+                    <img id="img01" style="width:100%">
+                  </div>
+                </div>
+                
+                <script>
+                function onClick(element) {
+                  document.getElementById("img01").src = element.src;
+                  document.getElementById("modal01").style.display = "block";
+                }
+                </script>
+  
+          </div>
+  
+          <div class="bg-text_button">
+  
+              <a>Author did this console for learning programing, don't use it in bad purposes.</a>
+  
+          </div>
+  
+          <div class="bg-text_button_2">
+  
+              <a><br>You can find code of this console on Author github(<a href="https://github.com/Mester-Oxdan">https://github.com/Mester-Oxdan</a>).</a>
+  
+          </div>
+  
+      </body>
+  </html>
+  

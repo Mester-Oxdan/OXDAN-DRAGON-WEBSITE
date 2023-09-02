@@ -124,6 +124,8 @@
     text-align: center;
     position: relative;
     bottom: -350px;
+    width: 275px;
+    height: 70px;
     text-decoration: none;
     display: block;
     font-size: 16px;

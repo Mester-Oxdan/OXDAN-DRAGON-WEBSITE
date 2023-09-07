@@ -1,6 +1,6 @@
 <?php
 // File path
-$filePath = 'path_to_zip_files/Oxdan-Dragon-Python_Copy.zip'; // Replace with the actual path to your file.
+$filePath = 'path_to_zip_files/Oxdan-Dragon-Console-Python-1-2023-Setup.zip'; // Replace with the actual path to your file.
 
 // Set headers
 header("Content-Type: application/octet-stream");

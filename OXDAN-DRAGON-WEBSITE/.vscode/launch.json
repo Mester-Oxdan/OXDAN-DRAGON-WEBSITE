@@ -4,11 +4,12 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "msedge",
             "request": "launch",
-            "name": "Open skip_start.html",
-            "file": "c:\\Users\\bogda\\Downloads\\My_site\\skip_start.html"
+            "name": "Open My_site.html",
+            "file": "c:\\Users\\bogda\\Downloads\\OXDAN-DRAGON-WEBSITE\\OXDAN-DRAGON-WEBSITE\\My_site.html"
         }
     ]
 }

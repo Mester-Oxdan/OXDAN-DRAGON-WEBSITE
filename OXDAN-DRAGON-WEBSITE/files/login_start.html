@@ -7,6 +7,20 @@
   <script src="js/login_script.js"></script>
 </head>
 <body>
+
+  <script>
+    const detectDeviceType = () =>
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+        ? 'Mobile'
+        : 'Desktop';
+    console.log(detectDeviceType()); // "Mobile" or "Desktop"
+    if (detectDeviceType() === "Mobile")
+    {
+        //fetch('files/html_errors/if_mobile.html')
+        window.open('html_errors/if_mobile.html', '_self');
+    }
+  </script>
+
   <div class="container">
     <h2>Login</h2>
     <form onsubmit="login(event)">

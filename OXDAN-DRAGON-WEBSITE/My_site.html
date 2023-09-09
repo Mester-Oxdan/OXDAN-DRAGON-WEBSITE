@@ -31,6 +31,18 @@
             <link rel="stylesheet" href="files/css/My_site_style.css">
         </head>
         <body>
+            <script>
+                const detectDeviceType = () =>
+                /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+                    ? 'Mobile'
+                    : 'Desktop';
+                console.log(detectDeviceType()); // "Mobile" or "Desktop"
+                if (detectDeviceType() === "Mobile")
+                {
+                    //fetch('files/html_errors/if_mobile.html')
+                    window.open('files/html_errors/if_mobile.html', '_self');
+                }
+            </script>
             <div class="bg_image_dragon"></div>
             <div class="bg-text">
             <div class="container">

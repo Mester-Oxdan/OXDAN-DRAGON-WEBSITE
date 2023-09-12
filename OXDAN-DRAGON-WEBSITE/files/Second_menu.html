@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> HOME MENU </title>
+        <link rel="icon" type="image/x-icon" href="resources/images/my_dragon_ico.ico">
+        <link rel="stylesheet" href="css/Second_menu_style.css">
+
+        <script>
+  
+            function playSound() {
+              setTimeout(() => {
+                  document.getElementById('mySound').play();
+                  document.getElementById('mySound').addEventListener('ended', function() {
+                    document.getElementById('mySound_2').play();
+                  });
+                  
+              }, 500)
+            }
+  
+          </script>
+          <style>
+
+            body
+            {
+                background: url("resources/images/Second_menu_background.gif");
+                background-position: relative;
+                background-repeat: no-repeat;
+                background-size: cover;
+                overflow: hidden;
+            }
+
+            #CounterVisitor
+            {
+              position: relative;
+              font-size: 50px;
+              left: 750px;
+              bottom: 200px;
+              text-align: bolder;
+              text-align: rgb(97, 97, 97);
+            }
+
+            .rating {
+              font-size: 30px;
+              text-align: center;
+              margin-bottom: 20px;
+              position: relative;
+              bottom: 370px;
+              left: -300px;
+            }
+            
+            .star {
+              cursor: pointer;
+              color: #ff9800; /* Default star color */
+              font-size: 2em;
+              transition: color 0.2s;
+              position: relative;
+              bottom: 40px;
+            }
+            
+            .star:hover {
+              color: #ffc107; /* Yellow color on hover */
+            }
+            
+            .progress-container {
+              position: relative;
+              left: 400px;
+              background-color: #ccc;
+              margin-top: 20px;
+              border-radius: 10px;
+              width: 30%;
+              
+              padding: 10px; /* Add padding for the thanks message */
+              text-align: center;
+            }
+            
+            .progress-bar {
+              width: 0;
+              height: 100%;
+              background-color: #ff9800; /* Change to your desired progress bar color */
+              transition: width 0.3s;
+              position: absolute;
+              bottom: 0;
+            }
+            
+            #progress-text {
+              font-weight: bold;
+              font-size: 18px;
+              color: #ffc107; /* Yellow color for progress text */
+              text-align: center;
+              width: 100%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+            
+            #thanks-message {
+              font-size: 24px;
+              text-align: center;
+              display: none;
+              position: absolute;
+              bottom: 10px;
+              left: 50%;
+              transform: translateX(-50%);
+              color: #ffc107; /* Yellow color for thanks message */
+            }
+
+          </style>
+    </head>
+    <body onload="playSound()">
+        <script>
+            const detectDeviceType = () =>
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+                ? 'Mobile'
+                : 'Desktop';
+            console.log(detectDeviceType()); // "Mobile" or "Desktop"
+            if (detectDeviceType() === "Mobile")
+            {
+                //fetch('files/html_errors/if_mobile.html')
+                window.open('html_errors/if_mobile.html', '_self');
+            }
+          </script>
+
+          <audio id="mySound" src="resources/musics/Undertale-Start-Menu.mp3"></audio>
+          <audio id="mySound_2" src="resources/musics/Undertale-Start-Menu.mp3"></audio>
+
+          <div class="bg-text_skip_button">
+  
+            <a class="button button_Console_dragon" href="before_skip_start.html"> CONSOLE OXDAN DRAGON. </a>
+            <a class="button button_list" href="Lists_html.html"> LISTS. </a>
+            <a class="button button_list" href="../My_site.html"> BACK. </a>
+
+            <div id="CounterVisitor">Views: <a id="view_number"></a></div>
+            <div class="rating">
+              <p>Rate us:</p>
+              <span class="star" data-rating="1">&#9733;</span>
+              <span class="star" data-rating="2">&#9733;</span>
+              <span class="star" data-rating="3">&#9733;</span>
+              <span class="star" data-rating="4">&#9733;</span>
+              <span class="star" data-rating="5">&#9733;</span>
+              <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+                <p id="progress-text">Overal: 0%</p>
+                <p id="thanks-message">Thanks for your rating!</p>
+            </div>
+            </div>
+            
+            <script src="js/rate_us_js.js"></script>
+
+            <script>
+              //localStorage.clear();
+              var n = localStorage.getItem('on_load_counter');
+        
+              if (n === null) {
+                  n = 0;
+              }
+          
+              n++;
+          
+              localStorage.setItem("on_load_counter", n);
+              
+              document.getElementById('view_number').innerHTML = n;
+              
+            </script>
+
+        </div>
+    </body>
+</html>

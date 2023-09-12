@@ -117,19 +117,18 @@
 
 .button 
 {
-    background-color: #04AA6D; /* Green */
+    background-color: #048caa; /* Green */
     border: 2px solid #FFF;
     color: white;
     padding: 20px;
     text-align: center;
     position: relative;
-    bottom: -350px;
-    width: 275px;
-    height: 70px;
+    bottom: -100px;
+    width: 270px;
     text-decoration: none;
     display: block;
     font-size: 16px;
-    margin: 50px auto;
+    margin: 15px auto;
     cursor: pointer;
 
     transition: .2s ease-in-out 0s;
@@ -142,10 +141,10 @@
     mask-position: 0;
 }
 
-.button_download_c {border-radius: 12px;}
-.button_download_python {border-radius: 12px;}
+.button_Console_dragon {border-radius: 120px;}
+.button_list {border-radius: 120px;}
 
-.button_download_c:hover
+.button_Console_dragon:hover
 {
 
     cursor: pointer;
@@ -157,7 +156,7 @@
     opacity: 1;
 }
 
-.button_download_python:hover
+.button_list:hover
 {
 
     cursor: pointer;

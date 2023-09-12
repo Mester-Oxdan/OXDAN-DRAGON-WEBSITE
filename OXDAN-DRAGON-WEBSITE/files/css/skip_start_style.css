@@ -142,8 +142,8 @@
     mask-position: 0;
 }
 
-.button_download_c {border-radius: 11px;}
-.button_download_python {border-radius: 11px;}
+.button_download_c {border-radius: 12px;}
+.button_download_python {border-radius: 12px;}
 
 .button_download_c:hover
 {

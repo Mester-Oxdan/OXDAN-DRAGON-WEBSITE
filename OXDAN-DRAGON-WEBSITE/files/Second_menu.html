@@ -31,86 +31,129 @@
                 overflow: hidden;
             }
 
-            #CounterVisitor
-            {
-              position: relative;
-              font-size: 50px;
-              left: 750px;
-              bottom: 200px;
-              text-align: bolder;
-              text-align: rgb(97, 97, 97);
-            }
-
-            .rating {
-              font-size: 30px;
-              text-align: center;
-              margin-bottom: 20px;
-              position: relative;
-              bottom: 370px;
-              left: -300px;
-            }
-            
-            .star {
-              cursor: pointer;
-              color: #ff9800; /* Default star color */
-              font-size: 2em;
-              transition: color 0.2s;
-              position: relative;
-              bottom: 40px;
-            }
-            
-            .star:hover {
-              color: #ffc107; /* Yellow color on hover */
-            }
-            
-            .progress-container {
-              position: relative;
-              left: 400px;
-              background-color: #ccc;
-              margin-top: 20px;
-              border-radius: 10px;
-              width: 30%;
+            .box {
+              background-color: black;
+              height: 100vh;
+              display: flex;
               
-              padding: 10px; /* Add padding for the thanks message */
-              text-align: center;
             }
-            
-            .progress-bar {
-              width: 0;
-              height: 100%;
-              background-color: #ff9800; /* Change to your desired progress bar color */
-              transition: width 0.3s;
+            p {
+              font-size: 17px;
+              align-items: center;
+            }
+            .box a {
+              display: inline-block;
+              background-color: #fff;
+              padding: 15px;
+              border-radius: 3px;
+            }
+            .modal {
+              align-items: center;
+              display: flex;
+              justify-content: center;
               position: absolute;
+              top: 0;
               bottom: 0;
+              left: 0;
+              right: 0;
+              background: rgba(0, 0, 0, 0.7);
+              transition: all 0.4s;
+              visibility: hidden;
+              opacity: 0;
             }
-            
-            #progress-text {
-              font-weight: bold;
-              font-size: 18px;
-              color: #ffc107; /* Yellow color for progress text */
-              text-align: center;
-              width: 100%;
+            .content {
               position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
+              background: white;
+              width: 400px;
+              padding: 1em 2em;
+              border-radius: 4px;
             }
-            
-            #thanks-message {
-              font-size: 24px;
-              text-align: center;
-              display: none;
+            .modal:target {
+              visibility: visible;
+              opacity: 1;
+            }
+            .box-close {
               position: absolute;
-              bottom: 10px;
-              left: 50%;
-              transform: translateX(-50%);
-              color: #ffc107; /* Yellow color for thanks message */
+              top: 0;
+              right: 15px;
+              color: #fe0606;
+              text-decoration: none;
+              font-size: 30px;
             }
+        
+                    .rating {
+                      font-size: 30px;
+                      text-align: center;
+                      margin-bottom: 20px;
+                      position: relative;
+                      bottom: 30px;
+                      left: 0px;
+                    }
+                    
+                    .star {
+                      cursor: pointer;
+                      color: #ff9800; /* Default star color */
+                      font-size: 2em;
+                      transition: color 0.2s;
+                      position: relative;
+                      bottom: 40px;
+                    }
+                    
+                    .star:hover {
+                      color: #ffc107; /* Yellow color on hover */
+                    }
+                    
+                    .progress-container {
+                      position: relative;
+                      left: 93px;
+                      bottom: -30px;
+                      background-color: #ccc;
+                      margin-top: 20px;
+                      border-radius: 10px;
+                      width: 50%;
+                      
+                      padding: 10px; /* Add padding for the thanks message */
+                      text-align: center;
+                    }
+                    
+                    .progress-bar {
+                      width: 0;
+                      height: 100%;
+                      background-color: #ff9800; /* Change to your desired progress bar color */
+                      transition: width 0.3s;
+                      position: absolute;
+                      bottom: 0;
+                    }
+                    
+                    #progress-text {
+                      font-weight: bold;
+                      font-size: 18px;
+                      color: #ffc107; /* Yellow color for progress text */
+                      text-align: center;
+                      width: 100%;
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                    }
+                    
+                    #thanks-message {
+                      font-size: 24px;
+                      
+                      display: none;
+                      position: absolute;
+                      bottom: 10px;
+                      left: 110px;
+                      transform: translateX(-50%);
+                      color: #ffc107; /* Yellow color for thanks message */
+                      
+                    }
 
           </style>
     </head>
-    <body onload="playSound()">
+    <body onload="playSound()"> <!-- -->
         <script>
+        
             const detectDeviceType = () =>
             /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
                 ? 'Mobile'
@@ -126,45 +169,177 @@
           <audio id="mySound" src="resources/musics/Undertale-Start-Menu.mp3"></audio>
           <audio id="mySound_2" src="resources/musics/Undertale-Start-Menu.mp3"></audio>
 
-          <div class="bg-text_skip_button">
+          <div id="buttons_to_show" class="bg-text_skip_button">
   
-            <a class="button button_Console_dragon" href="before_skip_start.html"> CONSOLE OXDAN DRAGON. </a>
-            <a class="button button_list" href="Lists_html.html"> LISTS. </a>
-            <a class="button button_list" href="../index.html"> BACK. </a>
-
-            <div id="CounterVisitor">Views: <a id="view_number"></a></div>
-            <div class="rating">
-              <p>Rate us:</p>
-              <span class="star" data-rating="1">&#9733;</span>
-              <span class="star" data-rating="2">&#9733;</span>
-              <span class="star" data-rating="3">&#9733;</span>
-              <span class="star" data-rating="4">&#9733;</span>
-              <span class="star" data-rating="5">&#9733;</span>
-              <div class="progress-container">
-                <div class="progress-bar" id="progress-bar"></div>
-                <p id="progress-text">Overal: 0%</p>
-                <p id="thanks-message">Thanks for your rating!</p>
-            </div>
-            </div>
-            
-            <script src="js/rate_us_js.js"></script>
-
-            <script>
-              //localStorage.clear();
-              var n = localStorage.getItem('on_load_counter');
-        
-              if (n === null) {
-                  n = 0;
-              }
-          
-              n++;
-          
-              localStorage.setItem("on_load_counter", n);
-              
-              document.getElementById('view_number').innerHTML = n;
-              
-            </script>
+            <a id="consoleDragonButton" class="button button_Console_dragon" href="before_skip_start.html">CONSOLE OXDAN DRAGON.</a>
+            <a id="listsButton" class="button button_list" href="Lists_html.html">LISTS.</a>
+            <a id="backButton" class="button button_list" href="../index.html">BACK.</a>
 
         </div>
+        
+    <script>
+      var popup = document.querySelector("#popup-box");
+    var buttonsToDisable = [document.getElementById("consoleDragonButton"), document.getElementById("listsButton"), document.getElementById("backButton")];
+      const intervalInMilliseconds = 15 * 60 * 10;
+      // Set up the timer to repeat the action every 5 minutes
+      const timer = setInterval(doSomething, intervalInMilliseconds);
+      
+      function enableButtons(buttons) {
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].removeAttribute("disabled");
+        }
+    }
+    
+    function removeButtons(buttons) {
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].remove();
+        }
+    }
+    
+    function reAddButtons() {
+        var container = document.getElementById("buttons_to_show");
+        var consoleDragonButton = document.createElement("a");
+        consoleDragonButton.id = "consoleDragonButton";
+        consoleDragonButton.className = "button button_Console_dragon";
+        consoleDragonButton.href = "before_skip_start.html";
+        consoleDragonButton.textContent = "CONSOLE OXDAN DRAGON.";
+    
+        var listsButton = document.createElement("a");
+        listsButton.id = "listsButton";
+        listsButton.className = "button button_list";
+        listsButton.href = "Lists_html.html";
+        listsButton.textContent = "LISTS.";
+    
+        var backButton = document.createElement("a");
+        backButton.id = "backButton";
+        backButton.className = "button button_list";
+        backButton.href = "../index.html";
+        backButton.textContent = "BACK.";
+    
+        container.appendChild(consoleDragonButton);
+        container.appendChild(listsButton);
+        container.appendChild(backButton);
+    }
+
+        // Function to be executed every 5 minutes
+        function doSomething() {
+
+          if (!popup || getComputedStyle(popup).visibility === "hidden") {
+            // Popup is not displayed, enable the buttons
+            enableButtons(buttonsToDisable);
+        } else {
+            // Popup is displayed, remove the buttons
+            removeButtons(buttonsToDisable);
+        }
+
+            // Check if the popup is already displayed
+            if (!document.querySelector("#popup-box:target")) {
+                // Create a new <div> element
+                var newDiv = document.createElement("div");
+
+                // Set some properties for the new element
+                newDiv.id = "myDiv";
+
+                // Create the popup box
+                var popupBox = document.createElement("div");
+                popupBox.id = "popup-box";
+                popupBox.className = "modal";
+
+                // Create the content div
+                var contentDiv = document.createElement("div");
+                contentDiv.className = "content";
+
+                // Create the rating section
+                var ratingDiv = document.createElement("div");
+                ratingDiv.className = "rating";
+
+                var ratingHeader = document.createElement("p");
+                ratingHeader.style.textAlign = "bolder";
+                ratingHeader.style.fontSize = "30px";
+                ratingHeader.textContent = "Rate us:";
+
+                ratingDiv.appendChild(ratingHeader);
+
+                // Create star elements
+                for (var i = 1; i <= 5; i++) {
+                    var star = document.createElement("span");
+                    star.className = "star";
+                    star.setAttribute("data-rating", i);
+                    star.innerHTML = "&#9733;";
+                    ratingDiv.appendChild(star);
+                }
+
+                // Create the progress container
+                var progressContainer = document.createElement("div");
+                progressContainer.className = "progress-container";
+
+                var progressBar = document.createElement("div");
+                progressBar.className = "progress-bar";
+                progressBar.id = "progress-bar";
+
+                var progressText = document.createElement("p");
+                progressText.id = "progress-text";
+                progressText.style.fontWeight = "bold";
+                progressText.style.fontSize = "18px";
+                progressText.style.color = "#ffc107";
+                progressText.style.textAlign = "center";
+                progressText.style.width = "100%";
+                progressText.style.position = "absolute";
+                progressText.style.top = "50%";
+                progressText.style.left = "50%";
+                progressText.style.transform = "translate(-50%, -50%)";
+                progressText.textContent = "Overall: 0%";
+
+                var thanksMessage = document.createElement("p");
+                thanksMessage.id = "thanks-message";
+                thanksMessage.style.fontSize = "24px";
+                thanksMessage.style.display = "none";
+                thanksMessage.style.position = "absolute";
+                thanksMessage.style.bottom = "10px";
+                thanksMessage.style.left = "110px";
+                thanksMessage.style.transform = "translateX(-50%)";
+                thanksMessage.style.color = "#ffc107";
+                thanksMessage.textContent = "Thanks for your rating!";
+
+                progressContainer.appendChild(progressBar);
+                progressContainer.appendChild(progressText);
+                progressContainer.appendChild(thanksMessage);
+
+                // Create the close button
+                var closeButton = document.createElement("a");
+                closeButton.href = "#";
+                closeButton.className = "box-close";
+                closeButton.textContent = "×";
+
+                // Assemble the elements
+                contentDiv.appendChild(ratingDiv);
+                contentDiv.appendChild(progressContainer);
+                contentDiv.appendChild(closeButton);
+
+                popupBox.appendChild(contentDiv);
+
+                // Append the popup box to the newDiv
+                newDiv.appendChild(popupBox);
+
+                // Append the newDiv to an existing element with the id "output"
+                var container = document.getElementById("output");
+                container.appendChild(newDiv);
+
+                // Programmatically trigger the popup by setting the hash fragment in the URL
+                location.hash = "#popup-box";
+
+                //const buttons_id_show = document.getElementById('buttons_to_show');
+                //buttons_id_show.style.display = 'block';
+            }
+        }
+        
+        // Set the interval to 5 minutes (5 * 60,000 milliseconds)
+        
+
+        // Call the function immediately when the page loads
+        doSomething();
+
+    </script>
+    <script src="rate_us_js.js"></script>
     </body>
 </html>

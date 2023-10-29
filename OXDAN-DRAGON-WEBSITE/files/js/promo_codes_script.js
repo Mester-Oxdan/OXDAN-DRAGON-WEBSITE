@@ -17,7 +17,7 @@ function playSound_promo() {
 submitButton.addEventListener("click", function() {
   let command_1 = commandInput.value;
   var command = command_1.replace(/\s+/g, '');
-  if (command.toLowerCase() === "sans-battle" || command.toLowerCase() === "sans_battle") {
+  if (command.toLowerCase() === "sans-battle" || command.toLowerCase() === "sans battle" || command.toLowerCase() === "sans_battle") {
     window.open('https://jcw87.github.io/c2-sans-fight/', "_self");
   } else {
 
@@ -39,7 +39,7 @@ document.addEventListener('keyup', function(event)
   {
   let command_2 = commandInput.value;
   var command = command_2.replace(/\s+/g, '');
-  if (command.toLowerCase() === "sans-battle" || command.toLowerCase() === "sans_battle") {
+  if (command.toLowerCase() === "sans-battle" || command.toLowerCase() === "sans battle" || command.toLowerCase() === "sans_battle") {
     window.open('https://jcw87.github.io/c2-sans-fight/', "_self");
   } 
   else {

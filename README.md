@@ -27,7 +27,7 @@ PLEASE READ ME FIRST!!!!!!!
 
 Oxdan Praduction Website was created by Oxdan Praduction, there you can download 2 consoles Oxdan-Dragon-Python and Oxdan-Dragon-C. More details about consoles on this githubs Oxdan-Dragon-Python(https://github.com/Mester-Oxdan/Oxdan-Dragon-Python) and Oxdan-Dragon-C(https://github.com/Mester-Oxdan/Oxdan-Dragon-C). One of importent things this project don't need any spacial libraries you can download zip file or do git clone doesn't matter, but remember about php extensions.
 
-Photos 2023:
+Photos 2024:
 
 Main menu.
 ![Untitled](https://github.com/Mester-Oxdan/OXDAN-DRAGON-WEBSITE/assets/106891875/c7930e92-7a0c-45d3-82a0-49678d349b44)
